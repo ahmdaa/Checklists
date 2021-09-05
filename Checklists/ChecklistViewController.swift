@@ -14,6 +14,8 @@ class ChecklistViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationController?.navigationBar.prefersLargeTitles = true
+        
         let item1 = ChecklistItem()
         item1.text = "Walk the dog"
         items.append(item1)
@@ -35,6 +37,24 @@ class ChecklistViewController: UITableViewController {
         let item5 = ChecklistItem()
         item5.text = "Eat ice cream"
         items.append(item5)
+    }
+    
+    // MARK:- Actions
+    @IBAction func addItem() {
+        let newRowIndex = items.count
+        
+        let item = ChecklistItem()
+        item.text = "I am a new row"
+        items.append(item)
+        
+        let indexPath = IndexPath(row: newRowIndex, section: 0)
+        
+        // Store new row in temporary array
+        let indexPaths = [indexPath]
+        
+        // Insert new row (or rows) in the table view
+        // .automatic parameter animates the insertion
+        tableView.insertRows(at: indexPaths, with: .automatic)
     }
     
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
