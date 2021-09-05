@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E2760A0426E53450004E6267 /* ChecklistItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2760A0326E53450004E6267 /* ChecklistItem.swift */; };
 		E298F24326E499BE004946C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E298F24226E499BE004946C1 /* AppDelegate.swift */; };
 		E298F24526E499BE004946C1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E298F24426E499BE004946C1 /* SceneDelegate.swift */; };
 		E298F24726E499BE004946C1 /* ChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E298F24626E499BE004946C1 /* ChecklistViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E2760A0326E53450004E6267 /* ChecklistItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChecklistItem.swift; sourceTree = "<group>"; };
 		E298F23F26E499BE004946C1 /* Checklists.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Checklists.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E298F24226E499BE004946C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E298F24426E499BE004946C1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				E298F24B26E499C1004946C1 /* Assets.xcassets */,
 				E298F24D26E499C1004946C1 /* LaunchScreen.storyboard */,
 				E298F25026E499C1004946C1 /* Info.plist */,
+				E2760A0326E53450004E6267 /* ChecklistItem.swift */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				E298F24726E499BE004946C1 /* ChecklistViewController.swift in Sources */,
 				E298F24326E499BE004946C1 /* AppDelegate.swift in Sources */,
 				E298F24526E499BE004946C1 /* SceneDelegate.swift in Sources */,
+				E2760A0426E53450004E6267 /* ChecklistItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
