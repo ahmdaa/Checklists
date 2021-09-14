@@ -15,6 +15,7 @@
 		E298F24A26E499BE004946C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E298F24826E499BE004946C1 /* Main.storyboard */; };
 		E298F24C26E499C1004946C1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E298F24B26E499C1004946C1 /* Assets.xcassets */; };
 		E298F24F26E499C1004946C1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E298F24D26E499C1004946C1 /* LaunchScreen.storyboard */; };
+		E29EA43C26F07D1E00447F28 /* AllListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29EA43B26F07D1E00447F28 /* AllListsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E298F24B26E499C1004946C1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E298F24E26E499C1004946C1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E298F25026E499C1004946C1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E29EA43B26F07D1E00447F28 /* AllListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllListsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				E298F24B26E499C1004946C1 /* Assets.xcassets */,
 				E298F24D26E499C1004946C1 /* LaunchScreen.storyboard */,
 				E298F25026E499C1004946C1 /* Info.plist */,
+				E29EA43B26F07D1E00447F28 /* AllListsViewController.swift */,
 			);
 			path = Checklists;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			files = (
 				E2760A0626E55939004E6267 /* ItemDetailViewController.swift in Sources */,
 				E298F24726E499BE004946C1 /* ChecklistViewController.swift in Sources */,
+				E29EA43C26F07D1E00447F28 /* AllListsViewController.swift in Sources */,
 				E298F24326E499BE004946C1 /* AppDelegate.swift in Sources */,
 				E298F24526E499BE004946C1 /* SceneDelegate.swift in Sources */,
 				E2760A0426E53450004E6267 /* ChecklistItem.swift in Sources */,
