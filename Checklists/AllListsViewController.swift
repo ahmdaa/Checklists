@@ -35,6 +35,19 @@ class AllListsViewController: UITableViewController, ListDetailViewControllerDel
         list = Checklist(name: "To Do")
         lists.append(list)
     }
+    
+    // MARK: - Table View Delegates
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        // Navigating to a view controller by instantiating it
+        let controller = storyboard!.instantiateViewController(withIdentifier: "ListDetailViewController") as! ListDetailViewController
+        
+        controller.delegate = self
+        
+        let checklist = lists[indexPath.row]
+        controller.checklistToEdit = checklist
+        
+        navigationController?.pushViewController(controller, animated: true)
+    }
 
     // MARK: - Table View Data Source
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
