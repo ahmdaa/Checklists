@@ -24,6 +24,8 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        // Show keyboard when screen appears
         textField.becomeFirstResponder()
     }
     
