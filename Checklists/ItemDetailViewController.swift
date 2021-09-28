@@ -40,7 +40,7 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
-    // MARK:- Actions
+    // MARK: Actions
     @IBAction func cancel() {
         delegate?.itemDetailViewControllerDidCancel(self)
     }
@@ -59,13 +59,13 @@ class ItemDetailViewController: UITableViewController, UITextFieldDelegate {
         }
     }
     
-    // MARK:- Table View Delegates
+    // MARK: Table View Delegates
     // Disable selection for all rows
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         return nil
     }
     
-    // MARK:- Text Field Delegates
+    // MARK: Text Field Delegates
     // Delegate method called when user changes input in text field
     // Allows clicking the done button only if there is input in the text field
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

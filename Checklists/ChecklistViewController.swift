@@ -10,6 +10,10 @@ import UIKit
 class ChecklistViewController: UITableViewController, ItemDetailViewControllerDelegate {
     
     var items = [ChecklistItem]()
+    
+    // Checklist object passed from AllListsViewController
+    // Optional implicitly unwrapped since it's not initialized
+    var checklist: Checklist!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,27 +24,36 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         // Load items
         loadChecklistItems()
         
+        title = checklist.name
+        
         // print("Documents folder is \(documentsDirectory())")
         // print("Data file path is \(dataFilePath())")
     }
     
-    // MARK:- Actions
+    // MARK: Actions
     func configureCheckmark(for cell: UITableViewCell, with item: ChecklistItem) {
+        // Get label of cell through a tag
         let label = cell.viewWithTag(1001) as! UILabel
         
+        // If cell's ChecklistItem has property checked set to true
         if item.checked {
-            label.text = "√"
-        } else {
-            label.text = ""
+            label.text = "√" // Add checkmark
+        }
+        // Otherwise or if property checked set to false
+        else {
+            label.text = "" // Remove checkmark
         }
     }
     
     func configureText(for cell: UITableViewCell, with item: ChecklistItem) {
+        // Get label of cell through a tag
         let label = cell.viewWithTag(1000) as! UILabel
+        
+        // Set the label's text as the text from cell's item
         label.text = item.text
     }
     
-    // MARK:- Table View Data Source
+    // MARK: Table View Data Source
     // override because TableViewController already has the methods
     // _ means no external parameter name.
     // External parameter name - Internal parameter name
@@ -82,7 +95,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         saveChecklistItems()
     }
     
-    // MARK:- Add Item View Controller Delegates
+    // MARK: Add Item View Controller Delegates
     func itemDetailViewControllerDidCancel(_ controller: ItemDetailViewController) {
         navigationController?.popViewController(animated: true)
     }
@@ -115,7 +128,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         saveChecklistItems()
     }
     
-    // MARK:- Navigation
+    // MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "AddItem" {
             let controller = segue.destination as! ItemDetailViewController
@@ -130,7 +143,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
         }
     }
     
-    // MARK:- Data Storage
+    // MARK: Data Storage
     // Returns URL path to the Documents folder for the app.
     // iOS uses URLS to refer to files in its filesystem.
     // Format: file://URL
@@ -175,7 +188,7 @@ class ChecklistViewController: UITableViewController, ItemDetailViewControllerDe
                 // Load the saved data back into items using the decoder's decode method. The only item of interest here would be the first parameter passed to decode. The decoder needs to know what type of data will be the result of the decode operation and you let it know by indicating that it will be an array of ChecklistItem objects.
                 items = try decoder.decode([ChecklistItem].self, from: data)
             } catch {
-                print("error decoding item array: \(error.localizedDescription)")
+                print("Error decoding item array: \(error.localizedDescription)")
             }
         }
     }
